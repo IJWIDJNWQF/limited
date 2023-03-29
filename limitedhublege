@@ -203,10 +203,10 @@ local function resolveid(image, flag)
 					local nfo = Marketplace and Marketplace:GetProductInfo(image)
 					image = tostring(image)
 					if nfo and nfo.AssetTypeId == 1 then
-						image = "rbxassetid://" .. image
+						image = "rbxassetid://5553946656" .. image
 					elseif nfo.AssetTypeId == 13 then
-						local decal = game:GetObjects("rbxassetid://" .. image)[1]
-						image = "rbxassetid://" .. ((decal and decal.Texture) or "0"):match("%d+$")
+						local decal = game:GetObjects("rbxassetid://5553946656" .. image)[1]
+						image = "rbxassetid://5553946656" .. ((decal and decal.Texture) or "0"):match("%d+$")
 						decal = (decal and decal:Destroy() and nil) or nil
 					end
 				end)
